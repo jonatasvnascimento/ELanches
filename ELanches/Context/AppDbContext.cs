@@ -1,5 +1,7 @@
 ﻿using ELanches.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Specialized;
 
 namespace ELanches.Context
 {
