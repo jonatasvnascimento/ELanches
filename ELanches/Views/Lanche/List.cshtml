@@ -8,10 +8,11 @@
     <h2>Todos os Lanches</h2>
 </div>
 
-@foreach(var lanche in Model){
+@foreach (var lanche in Model)
+{
     <div>
         <h4>@lanche.Nome</h4>
-        <p><img src="@lanche.ImagemUrl"/></p>
+        <p><img src="@lanche.ImagemUrl" /></p>
         <h3>@lanche.Preco.ToString("c")</h3>
     </div>
 }
