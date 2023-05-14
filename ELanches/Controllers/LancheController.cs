@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ELanches.Repositories.Interfaces;
+using ELanches.ViewModels;
 
 namespace ELanches.Controllers
 {
@@ -14,8 +15,11 @@ namespace ELanches.Controllers
 
         public IActionResult List()
         {
-            var lanches = _ILanchesRepository.Lanches;
-            return View(lanches);
+            var lanchesListViewModel = new LancheListViewModel();
+            lanchesListViewModel.Lanches = _ILanchesRepository.Lanches;
+            lanchesListViewModel.CategoriaAtual = "Categoria Atual";
+
+            return View(lanchesListViewModel);
         }
     }
 }
