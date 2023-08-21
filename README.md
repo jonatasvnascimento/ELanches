@@ -1,5 +1,6 @@
-# ELanches Execute
-Install Docker SQL Server
-CREATE DATABASE LanchesDatabase
-Rum Migration 
-Execute Project
+### Elanches Execute 
+- [ ] Install Docker Sql Server >= 2019
+- [ ] CREATE DATABASE LanchesDatabase
+- [ ] Rum Migration 
+	- [ ] update-database
+- [ ] Rum Project
