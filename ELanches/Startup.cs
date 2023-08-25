@@ -1,4 +1,5 @@
 ﻿using ELanches.Context;
+using ELanches.Models;
 using ELanches.Repositories;
 using ELanches.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace ELanches
             services.AddTransient<ILanchesRepository, LanchesRepository>();
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
             services.AddControllersWithViews();
 
