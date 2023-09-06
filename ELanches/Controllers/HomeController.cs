@@ -1,4 +1,6 @@
 ﻿using ELanches.Models;
+using ELanches.Repositories.Interfaces;
+using ELanches.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,9 +8,20 @@ namespace ELanches.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILanchesRepository _lanchesRepository;
+
+        public HomeController(ILanchesRepository lanchesRepository)
+        {
+            _lanchesRepository = lanchesRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                LanchesPreferidos = _lanchesRepository.LanchesPreferidos
+            };
+            return View(homeViewModel);
         }
 
         public IActionResult Demo()
