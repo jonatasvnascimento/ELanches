@@ -17,7 +17,7 @@ namespace ELanches.Migrations
                     CarrinhoCompraItemId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LancheId = table.Column<int>(type: "int", nullable: true),
-                    Quatidade = table.Column<int>(type: "int", nullable: false),
+                    Quantidade = table.Column<int>(type: "int", nullable: false),
                     CarrinhoCompraId = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
