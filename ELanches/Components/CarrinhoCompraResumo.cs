@@ -15,12 +15,12 @@ namespace ELanches.Components
 
         public IViewComponentResult Invoke()
         {
-            //var itens = _carrinhoCompra.GetCarrinhoCompraItens();
+            var itens = _carrinhoCompra.GetCarrinhoCompraItens();
 
-            var itens = new List<CarrinhoCompraItem>() { 
-                new CarrinhoCompraItem(), 
-                new CarrinhoCompraItem() 
-            };
+            //var itens = new List<CarrinhoCompraItem>() { 
+            //    new CarrinhoCompraItem(), 
+            //    new CarrinhoCompraItem() 
+            //};
 
             _carrinhoCompra.CarrinhoCompraItens = itens;
 
