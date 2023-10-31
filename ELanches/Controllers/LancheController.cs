@@ -39,5 +39,11 @@ namespace ELanches.Controllers
 
             return View(lanchesListViewModel);
         }
+
+        public IActionResult Details(int lancheId)
+        {
+            var lanche = _ILanchesRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
+            return View(lanche);
+        }
     }
 }
