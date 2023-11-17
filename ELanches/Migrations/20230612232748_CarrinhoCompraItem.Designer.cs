@@ -40,7 +40,7 @@ namespace ELanches.Migrations
                     b.Property<int?>("LancheId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quatidade")
+                    b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
                     b.HasKey("CarrinhoCompraItemId");
